@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Main {
+public class Main{
 
     private static final String TOYOTA = "Toyota";
     private static final String BMW = "Bmw";
@@ -70,10 +70,11 @@ public class Main {
         carList.add(car29);
         carList.add(car30);
 
-        Set<Car> carSet = new HashSet<>(carList);
+        Set<Car> carSet = new TreeSet<>(new CarComparator().reversed());
+        carSet.addAll(carList);
 
         for (Car car : carSet) {
-            System.out.println(car);
+            System.out.println(car.getName());
         }
-        }
+    }
     }
