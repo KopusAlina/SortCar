@@ -75,6 +75,5 @@ public class Main {
         for (Car car : carSet) {
             System.out.println(car);
         }
-
         }
     }
